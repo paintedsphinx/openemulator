@@ -17,7 +17,7 @@ What's in the work:
  * Phosphor persistance
  * PAL chroma mixing
 
-Check out the decoder in action. A raw frame:
+Check out the decoder in action. A raw PAL frame:
 
 http://openemulator.googlecode.com/files/PAL%20Source.png
 
