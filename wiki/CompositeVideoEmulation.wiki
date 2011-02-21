@@ -9,6 +9,7 @@ OpenEmulator features a NTSC/PAL video emulation that runs on GPU's. Most monito
  * CRT barrel effect
  * Dynamic scanlines
  * Center lighting effect (for simulating old CRT's who emit more light in the center of the screen)
+ * PAL phase alternating lines
 
 What's in the work:
 
