@@ -1,3 +1,5 @@
+=Composite NTSC/PAL video emulation=
+
 OpenEmulator features a NTSC/PAL video emulation that runs on GPU's. Most monitors can be emulated as this emulation uses emulated composite video signals. Some of the settings are:
 
  * IRE black/white levels
@@ -17,10 +19,12 @@ What's in the work:
 
 Check out the decoder in action. A raw frame:
 
-
+http://openemulator.googlecode.com/files/PAL%20Source.png
 
 And the decoded image:
 
-
+http://openemulator.googlecode.com/files/PAL%20Test.png
 
 Check out the composite video controls:
+
+http://openemulator.googlecode.com/files/Composite%20Decoder%20Controls.png
