@@ -1,0 +1,26 @@
+OpenEmulator features a NTSC/PAL video emulation that runs on GPU's. Most monitors can be emulated as this emulation uses emulated composite video signals. Some of the settings are:
+
+ * IRE black/white levels
+ * PAL/NTSC chroma demodulator, with variable chroma carrier frequency
+ * Dynamic 19-tap luma/chroma filters
+ * Y'UV/Y'IQ decoding with brightness, contrast, saturation and hue controls
+ * CRT barrel effect
+ * Dynamic scanlines
+ * Center lighting effect (for simulating old CRT's who emit more light in the center of the screen)
+
+What's in the work:
+
+ * PAL/NTSC dot crawl
+ * Realistic shadow mask/aperture grill simulation
+ * Phosphor persistance
+ * PAL chroma mixing
+
+Check out the decoder in action. A raw frame:
+
+
+
+And the decoded image:
+
+
+
+Check out the composite video controls:
