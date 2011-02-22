@@ -1,6 +1,6 @@
 =Composite NTSC/PAL video emulation=
 
-OpenEmulator features a NTSC/PAL video emulation that runs on GPU's. Most monitors can be emulated as this emulation uses emulated composite video signals. Some of the settings are:
+OpenEmulator features an NTSC/PAL video emulation that runs on GPU's. By using emulated composite video signals, emulations are completely generic. There are also many settings that allow to configure many kinds of video monitors:
 
  * IRE black/white levels
  * PAL/NTSC chroma demodulator, with variable chroma carrier frequency
@@ -29,3 +29,15 @@ http://openemulator.googlecode.com/files/PAL%20Test.png
 Check out the composite video controls:
 
 http://openemulator.googlecode.com/files/Composite%20Decoder%20Controls.png
+
+A screenshot of a composite video canvas with the NTSC emulation:
+
+[http://openemulator.googlecode.com/files/Canvas.png]
+
+A screenshot of a monochrome video canvas:
+
+<img src="http://openemulator.googlecode.com/files/Macintosh%20Canvas.png" width="800px">
+
+A screenshot of an RGB video canvas:
+
+<img src="http://openemulator.googlecode.com/files/Canvas%20Apple%20IIGS.png" width="800px">
