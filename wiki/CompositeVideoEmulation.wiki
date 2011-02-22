@@ -15,7 +15,6 @@ What's in the work:
 
  * Realistic shadow mask/aperture grill simulation
  * Phosphor persistance
- * PAL chroma mixing
 
 Check out the decoder in action. A raw PAL frame:
 
