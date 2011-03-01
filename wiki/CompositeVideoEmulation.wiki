@@ -9,11 +9,11 @@ OpenEmulator features an NTSC/PAL video emulation that runs on GPU's. Emulations
  * Y'UV/Y'IQ decoding with brightness, contrast, saturation and hue controls
  * CRT barrel effect
  * Dynamic scanlines
+ * Realistic shadow mask/aperture grill simulation
  * Center lighting effect (for simulating old CRT's who emit more light in the center of the screen)
 
 What's in the work:
 
- * Realistic shadow mask/aperture grill simulation
  * Phosphor persistance
 
 Check out the decoder in action. A raw PAL frame:
