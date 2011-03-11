@@ -4,16 +4,14 @@ OpenEmulator features an NTSC/PAL video emulation that runs on GPUs. Emulations 
 
  * IRE black/white levels
  * NTSC chroma demodulator, with variable chroma carrier frequency and line phase advance
- * PAL phase alternating lines
  * Dynamic 19-tap luma/chroma filters
- * Y'UV/Y'IQ decoding with brightness, contrast, saturation and hue controls
+ * Y'UV decoder with brightness, contrast, saturation and hue controls
+ * Y'IQ decoder with correct I and Q bandwidth
+ * PAL phase alternating lines
  * CRT barrel effect
  * Dynamic scanlines
  * Realistic shadow mask/aperture grill simulation
  * Center lighting effect (for simulating old CRT's who emit more light in the center of the screen)
-
-What's in the work:
-
  * Phosphor persistance
 
 Check out the decoder in action. A raw PAL frame:
