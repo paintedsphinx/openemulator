@@ -1,6 +1,6 @@
 =Composite NTSC/PAL video emulation=
 
-OpenEmulator features an NTSC/PAL video emulation that runs on a GPU. Emulations and monitors are completely separated by using actual composite video signals. Many kinds of monitors can be emulated by using the following features:
+OpenEmulator features an NTSC/PAL video emulation that runs on a GPU. Emulations and monitors are completely separated by using actual composite video signals. Many kinds of monitors can be emulated by combining the following features:
 
  * IRE black/white levels
  * NTSC chroma demodulator, with variable chroma carrier frequency and line phase advance
