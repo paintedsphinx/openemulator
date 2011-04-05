@@ -29,7 +29,7 @@ http://openemulator.googlecode.com/files/Composite%20Decoder%20Controls.png
 
 A screenshot of a composite video canvas with the NTSC emulation:
 
-[http://openemulator.googlecode.com/files/Canvas.png]
+[http://openemulator.googlecode.com/files/Canvas Butterfly.jpg]
 
 A screenshot of a monochrome video canvas:
 
