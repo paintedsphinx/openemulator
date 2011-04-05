@@ -21,11 +21,11 @@ http://openemulator.googlecode.com/files/Canvas%20Controls.jpg
 
 The PAL decoder in action. A raw frame:
 
-http://openemulator.googlecode.com/files/PAL%20Source.png
+http://openemulator.googlecode.com/files/PAL%20Raw%20Frame.jpg
 
 And the decoded image (notice the cross luma/chroma artifacts resulting from old chroma decoding techniques):
 
-http://openemulator.googlecode.com/files/PAL%20Test.png
+http://openemulator.googlecode.com/files/PAL%20Decoded%20Frame.jpg
 
 A composite video canvas with the NTSC emulation:
 
