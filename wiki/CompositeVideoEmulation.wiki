@@ -31,10 +31,10 @@ A composite video canvas with the NTSC emulation:
 
 http://openemulator.googlecode.com/files/Canvas%20Composite.jpg
 
-A monochrome video canvas:
+A monochrome video canvas (notice the video bandwidth):
 
 http://openemulator.googlecode.com/files/Canvas%20Monochrome.jpg
 
-An RGB video canvas:
+An RGB video canvas (notice the use of video bandwidth for color smearing, see <a href="http://en.wikipedia.org/wiki/File:AppleIIGSOS.png">original image</a>):
 
 http://openemulator.googlecode.com/files/Canvas%20RGB.jpg
