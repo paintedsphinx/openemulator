@@ -15,7 +15,7 @@ OpenEmulator features an NTSC/PAL video emulation that runs on a GPU. Emulations
  * Center lighting effect (for simulating old CRT's emitting more light in the center of the screen)
  * Phosphor persistance
 
-Check out the decoder in action. A raw PAL frame:
+Here you can see the decoder in action. A raw PAL frame:
 
 http://openemulator.googlecode.com/files/PAL%20Source.png
 
@@ -23,18 +23,18 @@ And the decoded image:
 
 http://openemulator.googlecode.com/files/PAL%20Test.png
 
-Check out the composite video controls:
+The composite video controls:
 
-http://openemulator.googlecode.com/files/Composite%20Decoder%20Controls.png
+http://openemulator.googlecode.com/files/Canvas%20Controls.jpg
 
-A screenshot of a composite video canvas with the NTSC emulation:
+A composite video canvas with the NTSC emulation:
 
-[http://openemulator.googlecode.com/files/Canvas%20Butterfly.jpg]
+http://openemulator.googlecode.com/files/Canvas%20Butterfly.jpg
 
-A screenshot of a monochrome video canvas:
+A monochrome video canvas:
 
-<img src="http://openemulator.googlecode.com/files/Macintosh%20Canvas.png" width="800px">
+http://openemulator.googlecode.com/files/Macintosh%20Canvas.png
 
-A screenshot of an RGB video canvas:
+An RGB video canvas:
 
-<img src="http://openemulator.googlecode.com/files/Canvas%20Apple%20IIGS.png" width="800px">
+http://openemulator.googlecode.com/files/Canvas%20Apple%20IIGS.png
