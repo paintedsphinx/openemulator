@@ -35,6 +35,6 @@ A monochrome video canvas (notice the video bandwidth):
 
 http://openemulator.googlecode.com/files/Canvas%20Monochrome.jpg
 
-An RGB video canvas (notice the use of video bandwidth for color smearing, see <a href="http://en.wikipedia.org/wiki/File:AppleIIGSOS.png">original image</a>):
+An RGB video canvas (notice the use of video bandwidth for color smearing, see <a href="http://upload.wikimedia.org/wikipedia/en/archive/0/0d/20101019164702%21AppleIIGSOS.png">original image</a>):
 
 http://openemulator.googlecode.com/files/Canvas%20RGB.jpg
