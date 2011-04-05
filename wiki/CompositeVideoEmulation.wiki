@@ -33,7 +33,7 @@ http://openemulator.googlecode.com/files/Canvas%20Butterfly.jpg
 
 A monochrome video canvas:
 
-http://openemulator.googlecode.com/files/Canvas%20Monochrome.png
+http://openemulator.googlecode.com/files/Canvas%20Monochrome.jpg
 
 An RGB video canvas:
 
