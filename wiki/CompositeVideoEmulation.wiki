@@ -37,4 +37,4 @@ http://openemulator.googlecode.com/files/Canvas%20Monochrome.jpg
 
 An RGB video canvas:
 
-http://openemulator.googlecode.com/files/Canvas%20Apple%20IIGS.png
+http://openemulator.googlecode.com/files/Canvas%20RGB.jpg
