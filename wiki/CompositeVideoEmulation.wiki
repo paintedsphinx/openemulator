@@ -23,7 +23,7 @@ The PAL decoder in action. A raw frame:
 
 http://openemulator.googlecode.com/files/PAL%20Source.png
 
-And the decoded image:
+And the decoded image (notice the cross luma/chroma artifacts resulting from old chroma decoding techniques):
 
 http://openemulator.googlecode.com/files/PAL%20Test.png
 
