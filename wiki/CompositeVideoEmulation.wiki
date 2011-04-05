@@ -29,7 +29,7 @@ http://openemulator.googlecode.com/files/PAL%20Test.png
 
 A composite video canvas with the NTSC emulation:
 
-http://openemulator.googlecode.com/files/Canvas%20Butterfly.jpg
+http://openemulator.googlecode.com/files/Canvas%20Composite.jpg
 
 A monochrome video canvas:
 
