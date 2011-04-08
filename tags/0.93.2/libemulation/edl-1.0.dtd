@@ -1,0 +1,62 @@
+<!--
+   Emulation Description Language version 1.0 DTD
+
+   For further information, see: http://www.openemulator.org
+
+   Copyright (c) 2010 Marc S. Ressl,
+   All Rights Reserved. 
+
+   This DTD module is identified by the PUBLIC and SYSTEM identifiers:
+
+   PUBLIC "-//W3C//DTD EDL 1.0//EN"
+   SYSTEM "http://www.openemulator.org/DTD/edl-1.dtd"
+
+   $Revision: 0.2 $
+   $Date: 2011/01/05 12:00:00 $
+-->
+
+<!ELEMENT edl (device*|connector*|port*|component*)>
+<!ATTLIST edl version CDATA "1.0">
+<!ATTLIST edl label CDATA #IMPLIED>
+<!ATTLIST edl image CDATA #IMPLIED>
+<!ATTLIST edl description CDATA #IMPLIED>
+
+<!ELEMENT device (setting*)>
+<!ATTLIST device id ID #REQUIRED>
+<!ATTLIST device label CDATA #REQUIRED>
+<!ATTLIST device image CDATA #REQUIRED>
+<!ATTLIST device group CDATA #IMPLIED>
+
+<!ELEMENT setting EMPTY>
+<!ATTLIST setting ref IDREF #REQUIRED>
+<!ATTLIST setting name CDATA #REQUIRED>
+<!ATTLIST setting label CDATA #REQUIRED>
+<!ATTLIST setting type CDATA #REQUIRED>
+<!ATTLIST setting options CDATA #IMPLIED>
+
+<!ELEMENT connector (inlet*)>
+<!ATTLIST connector id ID #REQUIRED>
+<!ATTLIST connector ref CDATA #REQUIRED>
+<!ATTLIST connector type CDATA #REQUIRED>
+<!ATTLIST connector label CDATA #REQUIRED>
+
+<!ELEMENT port (inlet*)>
+<!ATTLIST port id ID #REQUIRED>
+<!ATTLIST port ref CDATA #REQUIRED>
+<!ATTLIST port type CDATA #REQUIRED>
+<!ATTLIST port label CDATA #REQUIRED>
+
+<!ELEMENT inlet EMPTY>
+<!ATTLIST inlet ref IDREF #REQUIRED>
+<!ATTLIST inlet property CDATA #REQUIRED>
+<!ATTLIST inlet outletRef CDATA #REQUIRED>
+
+<!ELEMENT component (property*)>
+<!ATTLIST component id ID #REQUIRED>
+<!ATTLIST component class CDATA #REQUIRED>
+
+<!ELEMENT property (setting*)>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST property ref CDATA #IMPLIED>
+<!ATTLIST property src CDATA #IMPLIED>
