@@ -8,8 +8,7 @@
  * Controls a generic floating bus
  */
 
-#include <stdlib.h>
-
+#include "stdlib.h"
 #include "FloatingBus.h"
 
 FloatingBus::FloatingBus()

@@ -36,6 +36,4 @@ private:
     ControlBusPowerState powerState;
     
     CanvasDisplayConfiguration configuration;
-    
-    void updateBezel();
 };

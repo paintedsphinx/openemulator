@@ -16,6 +16,8 @@
 class ROM : public OEComponent
 {
 public:
+    ROM();
+    
     bool setData(string name, OEData *data);
     bool getData(string name, OEData **data);
     bool init();

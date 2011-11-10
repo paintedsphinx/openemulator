@@ -680,10 +680,7 @@ void PAAudio::setPlayPosition(float time)
     sf_seek(playSNDFILE, playFrameIndex / playSRCRatio, SEEK_SET);
     
     if (!playing)
-    {
         playSRCInputFrameNum = 0;
-        playSRCEndOfInput = false;
-    }
     
     unlock();
 }
@@ -736,15 +733,10 @@ void PAAudio::playAudio(float *inputBuffer,
     {
         if (!playSRCInputFrameNum)
         {
-            OEUInt32 inputFrameNum = (OEUInt32) playSRCInput.size() / playChannelNum;
-            
             playSRCInputFrameIndex = 0;
-            
             playSRCInputFrameNum = (OEUInt32) sf_readf_float(playSNDFILE,
                                                              &playSRCInput.front(),
-                                                             inputFrameNum);
-            
-            playSRCEndOfInput = (playSRCInputFrameNum != inputFrameNum);
+                                                             (OEUInt32) playSRCInput.size() / playChannelNum);
         }
         
         SRC_DATA srcData =
@@ -754,13 +746,13 @@ void PAAudio::playAudio(float *inputBuffer,
             playSRCInputFrameNum,
             srcOutputFrameNum,
             0, 0,
-            playSRCEndOfInput,
+            0,
             playSRCRatio,
         };
         
         src_process(playSRC, &srcData);
         
-        if (playSRCEndOfInput && !srcData.output_frames_gen)
+        if (!srcData.output_frames_gen)
         {
             playing = false;
             

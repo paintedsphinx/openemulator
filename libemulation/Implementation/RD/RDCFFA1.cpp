@@ -12,7 +12,7 @@
 
 #include "DeviceInterface.h"
 #include "StorageInterface.h"
-#include "MemoryInterface.h"
+#include "AddressDecoder.h"
 
 #define ATA_READ            0x20
 #define ATA_WRITE           0x30
@@ -34,7 +34,7 @@ RDCFFA1::RDCFFA1()
     ram = NULL;
     rom = NULL;
     
-    mmu = NULL;
+    memoryBus = NULL;
     
     diskImageFP = NULL;
     forceWriteProtected = false;
@@ -85,17 +85,48 @@ bool RDCFFA1::setRef(string name, OEComponent *ref)
             device->postMessage(this, DEVICE_ADD_STORAGE, this);
     }
     else if (name == "ram")
-    {
-        if (ref)
-            ram = ref;
-    }
+        ram = ref;
     else if (name == "rom")
+        rom = ref;
+    else if (name == "memoryBus")
     {
-        if (ref)
-            rom = ref;
+        AddressDecoderMap ramMap, romMap, ioMap;
+        
+        ramMap.startAddress = 0x1000;
+        ramMap.endAddress = 0x8fff;
+        ramMap.read = true;
+        ramMap.write = true;
+        
+        romMap.startAddress = 0x9000;
+        romMap.endAddress = 0xaeff;
+        romMap.read = true;
+        romMap.write = true;
+        
+        ioMap.startAddress = 0xaf00;
+        ioMap.endAddress = 0xafff;
+        ioMap.read = true;
+        ioMap.write = true;
+        
+        if (memoryBus)
+        {
+            ramMap.component = NULL;
+            memoryBus->postMessage(this, ADDRESSDECODER_MAP, &ramMap);
+            romMap.component = NULL;
+            memoryBus->postMessage(this, ADDRESSDECODER_MAP, &romMap);
+            ioMap.component = NULL;
+            memoryBus->postMessage(this, ADDRESSDECODER_MAP, &ioMap);
+        }
+        memoryBus = ref;
+        if (memoryBus)
+        {
+            ramMap.component = ram;
+            memoryBus->postMessage(this, ADDRESSDECODER_MAP, &ramMap);
+            romMap.component = rom;
+            memoryBus->postMessage(this, ADDRESSDECODER_MAP, &romMap);
+            ioMap.component = this;
+            memoryBus->postMessage(this, ADDRESSDECODER_MAP, &ioMap);
+        }
     }
-    else if (name == "mmu")
-        mmu = ref;
     else
         return false;
     
@@ -111,14 +142,7 @@ bool RDCFFA1::init()
         return false;
     }
     
-    mapMMU(MMU_MAP);
-    
     return true;
-}
-
-void RDCFFA1::dispose()
-{
-    mapMMU(MMU_UNMAP);
 }
 
 bool RDCFFA1::postMessage(OEComponent *sender, int message, void *data)
@@ -325,36 +349,6 @@ void RDCFFA1::write(OEAddress address, OEUInt8 value)
             
             break;
         }
-    }
-}
-
-void RDCFFA1::mapMMU(int message)
-{
-    MemoryMap ramMap, romMap, ioMap;
-    
-    ramMap.component = ram;
-    ramMap.startAddress = 0x1000;
-    ramMap.endAddress = 0x8fff;
-    ramMap.read = true;
-    ramMap.write = true;
-    
-    romMap.component = rom;
-    romMap.startAddress = 0x9000;
-    romMap.endAddress = 0xaeff;
-    romMap.read = true;
-    romMap.write = true;
-    
-    ioMap.component = this;
-    ioMap.startAddress = 0xaf00;
-    ioMap.endAddress = 0xafff;
-    ioMap.read = true;
-    ioMap.write = true;
-    
-    if (mmu)
-    {
-        mmu->postMessage(this, message, &ramMap);
-        mmu->postMessage(this, message, &romMap);
-        mmu->postMessage(this, message, &ioMap);
     }
 }
 

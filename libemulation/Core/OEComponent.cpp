@@ -52,11 +52,6 @@ void OEComponent::update()
     return;
 }
 
-void OEComponent::dispose()
-{
-    return;
-}
-
 
 
 bool OEComponent::postMessage(OEComponent *sender, int message, void *data)

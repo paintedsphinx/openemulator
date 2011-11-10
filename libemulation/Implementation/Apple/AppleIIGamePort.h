@@ -13,30 +13,18 @@
 class AppleIIGamePort : public OEComponent
 {
 public:
-    AppleIIGamePort();
-    
 	bool setValue(string name, string value);
-    bool getValue(string name, string &value);
 	bool setRef(string name, OEComponent *ref);
-	bool init();
-    
-	bool postMessage(OEComponent *sender, int message, void *data);
-    
-    OEUInt8 read(OEAddress address);
+	
+	OEUInt8 read(OEAddress address);
 	void write(OEAddress address, OEUInt8 value);
 	
 private:
-    OEComponent *controlBus;
 	OEComponent *floatingBus;
-	OEComponent *gamePort;
+	OEComponent *port;
 	
-    float pdl[4];
-    bool pb[3];
-	bool an[4];
-    
-    OEUInt64 timerStart;
-    
-    void setAN(int index, bool value);
-    bool isTimerExpired(int index);
-    void resetTimer();
+	bool an0;
+	bool an1;
+	bool an2;
+	bool an3;
 };

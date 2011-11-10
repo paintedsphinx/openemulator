@@ -9,8 +9,7 @@
  */
 
 #include "RAM.h"
-
-#include "MemoryInterface.h"
+#include "AddressDecoder.h"
 
 RAM::RAM()
 {
@@ -105,8 +104,17 @@ bool RAM::postMessage(OEComponent *sender, int message, void *data)
 {
     switch (message)
     {
-        case RAM_GET_DATA:
+        case RAM_GET_MEMORYSIZE:
+            *((OEUInt64 *) data) = size;
+            return true;
+            
+        case RAM_GET_MEMORY:
             *((OEData **) data) = &this->data;
+            return true;
+            
+        case RAM_SET_MEMORY:
+            this->data = *((OEData *) data);
+            this->data.resize((size_t) size);
             return true;
     }
     
