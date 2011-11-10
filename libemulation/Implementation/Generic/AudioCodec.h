@@ -9,7 +9,6 @@
  */
 
 #include "OEComponent.h"
-
 #include "AudioInterface.h"
 
 class AudioCodec : public OEComponent

@@ -10,10 +10,9 @@
 
 #include "Apple1IO.h"
 
-#include "MC6821.h"
-
 #include "CanvasInterface.h"
 #include "RS232Interface.h"
+#include "MC6821.h"
 
 #define APPLE1KEYBOARD_MASK	0x80
 

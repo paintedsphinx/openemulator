@@ -61,7 +61,7 @@ public:
     void stop();
     bool isRecording();
     float getRecordingTime();
-    OEUInt64 getRecordingSize();
+    long long getRecordingSize();
     
 private:
     bool fullDuplex;
@@ -88,20 +88,19 @@ private:
     float playVolume;
     bool playThrough;
     SNDFILE *playSNDFILE;
-    OEUInt32 playChannelNum;
     bool playing;
-    OEUInt64 playFrameIndex;
-    OEUInt64 playFrameNum;
+    long long playFrameIndex;
+    long long playFrameNum;
+    OEUInt32 playChannelNum;
     double playSRCRatio;
     SRC_STATE *playSRC;
-    vector<float> playSRCInput;
-    bool playSRCEndOfInput;
-    OEUInt32 playSRCInputFrameIndex;
-    OEUInt32 playSRCInputFrameNum;
+    vector<float> playSRCBuffer;
+    OEUInt32 playSRCBufferFrameBegin;
+    OEUInt32 playSRCBufferFrameEnd;
     
     SNDFILE *recordingSNDFILE;
     bool recording;
-    OEUInt64 recordingFrameNum;
+    long long recordingFrameNum;
     
     void initBuffer();
     bool isAudioBufferEmpty();

@@ -1,13 +1,11 @@
-==1.0.2==
-* Implement AppleIIMMU
-* Implement AppleIISlotMemory and AppleIISlotExpansionMemory
-* Implement AppleIIFloatingBus
-* Implement AppleIIVideo and AppleIIVideoGenerator
+==1.0==
+* Fix Cocoa initial window sizes
+* Fix opening emulations (sometimes dragging disk images to canvas opens the template chooser)
+
+==1.0.1==
 * Implement Apple II
 * Implement Apple IIplus
 * Implement Apple IIj-plus
-
-==1.0.3==
 * Implement Apple Disk II Interface Card
 * Implement Apple Disk II
 * Implement Apple Language Card
@@ -17,7 +15,7 @@
 * Implement Videx Videoterm
 * Refactor PAAudio
 
-==1.0.4==
+==1.0.2==
 * Implement Apple IIe
 * Implement Apple II Memory Expansion Card
 * Implement AE RamWorks
@@ -32,17 +30,14 @@
 * Implement Apple Graphics Tablet
 * Implement Apple II Super Serial Card
 
-==1.0.5==
+==1.0.3==
 * Implement Apple IIc FF
 * Implement Apple IIc 00
 * Implement Apple IIc 01
 * Implement Apple IIc 03
 * Implement Apple IIc plus
 
-==1.0.6==
-* Implement Apple III
-
-==1.0.7==
+==1.0.4==
 * Implement Apple IIGS ROM00, ROM01, ROM03
 
 ==Devices==
@@ -50,7 +45,6 @@
 * Implement Digisector DS-65
 
 ==Canvas==
-* Fix persistence when powering down and restarting an emulation
 * Implement shadow mask with width depending on strength
 * Implement video bloom
 * Implement RGB>YIQ>RGB video processing in the GPU
@@ -65,14 +59,12 @@
 * Implement frame interpolation with sinc function
 
 ==GUI==
-* Fix Cocoa initial window sizes
-* Fix opening emulations (sometimes dragging disk images to canvas opens the template chooser)
 * Implement UNICODE entry of composed keys on Mac OS X (like ^ or « or `)
 * Fix [CanvasView update] problem in paper view
 * Fix scrolling in template chooser when changing group
 * CanvasWindow in fullscreen mode could have multiple display sizes (e.g. for the Macintosh 512x342 window)
 
-==Secondary things==
+==Unimportant things==
 * Remove data property, and replace with value so that it points to the file (so the interface for opening files is unified, and we don't have to exchange buffers). Implement an OEData class that is capable of read from/writing to file. How could OEData get the handle to a zip package? How could an emulation
 * Implement a CPU Load Window
 * Add search in template chooser

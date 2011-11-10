@@ -10,6 +10,12 @@
 
 #include "ROM.h"
 
+#include "AddressDecoder.h"
+
+ROM::ROM()
+{
+}
+
 bool ROM::setData(string name, OEData *data)
 {
     if (name == "image")

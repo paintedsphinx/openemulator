@@ -401,7 +401,6 @@
             @"Power Down",
             @"Sleep",
             @"Wake Up",
-            @"Warm Restart",
             NSToolbarFlexibleSpaceItemIdentifier,
             @"Library",
             nil];

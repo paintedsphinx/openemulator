@@ -11,7 +11,6 @@
 #include <math.h>
 
 #include "AudioCodec.h"
-
 #include "ControlBusInterface.h"
 
 // Notes:
