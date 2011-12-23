@@ -1,0 +1,76 @@
+==1.0.3==
+* Fix AppleIIVideoRAMSync
+* Fix screen blanking when power is turned off
+* Check CPU consumption when paused
+* Implement AppleIISlotMemory and AppleIISlotExpansionMemory
+* Implement Apple IIplus
+* Implement Apple IIj-plus
+* Implement Apple Disk II Interface Card
+* Implement Apple Disk II
+* Implement Apple Language Card
+* Implement SoundPlayer
+* Implement CFFA card
+* Implement Saturn RAMboard
+* Implement Videx Videoterm
+* Refactor PAAudio
+
+==1.0.4==
+* Implement Apple IIe
+* Implement Apple II Memory Expansion Card
+* Implement AE RamWorks
+* Implement Mountain Computer Apple Clock
+* Implement TimeMaster II H.O.
+* Implement Thunderclock Plus
+* Implement ZIP Chip
+* Implement AE TransWarp
+* Implement Microsoft Softcard
+* Implement Apple Silentype Interface Card
+* Implement Apple Silentype
+* Implement Apple Graphics Tablet
+* Implement Apple II Super Serial Card
+
+==1.0.5==
+* Implement Apple IIc FF
+* Implement Apple IIc 00
+* Implement Apple IIc 01
+* Implement Apple IIc 03
+* Implement Apple IIc plus
+* Implement Mountain Computer SuperTalker
+* Implement Mockingboard
+
+==1.0.6==
+* Implement Apple III
+
+==1.0.7==
+* Implement Apple IIGS ROM00, ROM01, ROM03
+
+==Devices==
+* Implement video capture interface
+* Implement Digisector DS-65
+
+==Canvas==
+* Fix persistence when powering down and restarting an emulation
+* Implement video bloom
+* Implement RGB>YIQ>RGB video processing in the GPU
+
+==Framework==
+* Find a way so that ROM images can be stored in packages (but not in the resources directory)... use RAM block and read-only memory mapping?
+* Implement select settings with values and labels
+* Add OESound: resampling, rendering to audio buffer?
+* Do disk image file locking if the disk image is writable (flock)
+* TCP AT Modem emulation
+* Add debugging ˆ la JTAG with gdb commands in a separate terminal
+* Implement frame interpolation with sinc function
+
+==GUI==
+* Fix Cocoa initial window sizes
+* Fix opening emulations (sometimes dragging disk images to canvas opens the template chooser)
+* Implement UNICODE entry of composed keys on Mac OS X (like ^ or « or `)
+* Fix [CanvasView update] problem in paper view
+* Fix scrolling in template chooser when changing group
+* CanvasWindow in fullscreen mode could have multiple display sizes (e.g. for the Macintosh 512x342 window)
+
+==Secondary things==
+* Remove data property, and replace with value so that it points to the file (so the interface for opening files is unified, and we don't have to exchange buffers). Implement an OEData class that is capable of read from/writing to file. How could OEData get the handle to a zip package? How could an emulation
+* Implement a CPU Load Window
+* Add search in template chooser
